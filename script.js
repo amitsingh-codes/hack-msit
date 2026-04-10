@@ -123,7 +123,7 @@ function buildBarChart() {
     val.textContent = room.kwh + ' kWh';
 
     const bar = document.createElement('div');
-    bar.className = 'bar' + (isTop ? ' active-bar' : '');
+    bar.className = 'bar active-bar'
     bar.style.height = '0%';
     bar.title = `${room.label}: ${room.kwh} kWh`;
     bar.addEventListener('click', () => toggleBarHighlight(bar, val));
@@ -149,6 +149,7 @@ function toggleBarHighlight(bar, val) {
   bars.forEach(b => b.classList.remove('active-bar'));
   vals.forEach(v => v.classList.remove('active-val'));
   bar.classList.add('active-bar');
+
   val.classList.add('active-val');
 }
 
